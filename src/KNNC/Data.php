@@ -79,7 +79,7 @@ class Data
 		'千' => 3,
     ];
 
-    const PLACE_STRICT = [
+    const PLACE_COMPLEX = [
         '拾' => 1,
         //'廿' => 20, // |--- Warning --------------------------------------------------|
         //'?'  => 20, // | ここはコメントを外しても正常に動作しません。                 |
@@ -114,7 +114,7 @@ class Data
 		'無量大数' => 68, 
     ];
 
-    const RANK_STRICT = [
+    const RANK_COMPLEX = [
         '萬' => 4,
 		'億' => 8,
 		'兆' => 12,

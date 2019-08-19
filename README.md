@@ -43,7 +43,7 @@ Result: "一億二三四五万六七八九"
 SooraJP\KNNC::num2kan(123456789, SooraJP\KNNC\ConvertType::STRICT);
 ```
 
-Result: "一億二千三百四拾五萬六千七百八拾九"
+Result: "一億二千三百四十五万六千七百八十九"
 
 **ConvertType** Complex
 

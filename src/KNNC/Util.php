@@ -84,7 +84,7 @@ class Util
                 return false;
 
             case array_key_exists($char, Data::PLACE_GENERAL):
-            case array_key_exists($char, Data::PLACE_STRICT):
+            case array_key_exists($char, Data::PLACE_COMPLEX):
                 return true;
 
         }
@@ -107,7 +107,7 @@ class Util
         {
 
             case array_key_exists($str, Data::RANK_GENERAL):
-            case array_key_exists($str, Data::RANK_STRICT):
+            case array_key_exists($str, Data::RANK_COMPLEX):
                 return true;
 
         }
@@ -168,8 +168,8 @@ class Util
         if(array_key_exists($char, Data::PLACE_GENERAL))
             return Data::PLACE_GENERAL[$char];
 
-        if(array_key_exists($char, Data::PLACE_STRICT))
-            return Data::PLACE_STRICT[$char];
+        if(array_key_exists($char, Data::PLACE_COMPLEX))
+            return Data::PLACE_COMPLEX[$char];
 
         return false;
 
@@ -187,8 +187,8 @@ class Util
         if(array_key_exists($str, Data::RANK_GENERAL))
             return Data::RANK_GENERAL[$str];
 
-        if(array_key_exists($str, Data::RANK_STRICT))
-            return Data::RANK_STRICT[$str];
+        if(array_key_exists($str, Data::RANK_COMPLEX))
+            return Data::RANK_COMPLEX[$str];
 
         return false;
 
@@ -225,7 +225,7 @@ class Util
         if($num < 1 || 3 < $num)
             return false;
 
-        return array_search($num, ($convertType & ConvertType::STRICT) ? Data::PLACE_STRICT : Data::PLACE_GENERAL, true);
+        return array_search($num, ($convertType & ConvertType::COMPLEX) ? Data::PLACE_COMPLEX : Data::PLACE_GENERAL, true);
 
     }
 
@@ -235,7 +235,7 @@ class Util
         if($num % 4 !== 0)
             return false;
 
-        return array_search($num, ($convertType & ConvertType::STRICT) ? Data::RANK_STRICT : Data::RANK_GENERAL, true);
+        return array_search($num, ($convertType & ConvertType::COMPLEX) ? Data::RANK_COMPLEX : Data::RANK_GENERAL, true);
 
     }
 
