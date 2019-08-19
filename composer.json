@@ -1,0 +1,27 @@
+{
+    "name": "soora-jp/knnc",
+    "description": "Convert Japanese-Kanji numerals string and numeric each other",
+    "type": "library",
+    "keywords": ["convert", "japanese", "kanji", "numerals", "string", "numeric"],
+    "homepage": "https://github.com/soora-jp/php-knnc",
+    "time": "2019-08-19 13:55:00",
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Sora",
+            "email": "dev@soora.jp",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "dev@soora.jp"
+    },
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SooraJP\\": "src/"
+        }
+    }
+}
