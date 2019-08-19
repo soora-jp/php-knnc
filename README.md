@@ -63,7 +63,7 @@ Result: "壱億弐千参百四拾五萬六千七百八拾九"
 
 ## Reference example
 
-**kan2num()**
+**kan2num()**  
 ・「九千弐拾参」->「9023」  
 ・「123百万」->「123000000」  
 ・「1億1万」->「100010000」  
@@ -73,7 +73,7 @@ Result: "壱億弐千参百四拾五萬六千七百八拾九"
 
 ## Specification like a bug
 
-**kan2num()**
+**kan2num()**  
 ・「二十万12345」->「212345」
 
 ## To be changed in the future
