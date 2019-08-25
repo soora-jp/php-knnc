@@ -31,7 +31,7 @@
 namespace SooraJP;
 
 use SooraJP\KNNC\Util;
-use SooraJP\KNNC\StringFetcher;
+use SooraJP\KNNC\CharFetcher;
 use SooraJP\KNNC\ConvertType;
 
 class KNNC
@@ -74,7 +74,7 @@ class KNNC
 		// 複数文字の rank に対応するためのキュー
 		$rank_queue = '';
 
-		$fetcher = new StringFetcher($str);
+		$fetcher = new CharFetcher($str);
 
 		while($char = $fetcher->fetch())
 		{

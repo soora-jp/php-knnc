@@ -33,11 +33,11 @@ namespace SooraJP\KNNC;
 /**
  * Class StringFetcher.
  * 
- * Fetch the string from the specified location for the specified number of characters.
+ * Fetch characters one by one from the string beginning.
  * 
  * @package SooraJP\KNNC
  */
-class StringFetcher 
+class CharFetcher 
 {
 
     /** @var string */
@@ -49,38 +49,22 @@ class StringFetcher
     /** @var int */
     private $cnt;
 
-    /** @var int */
-    public $ptLen;
-
-    /** @var bool */
-    public $spacePadding;
-
-    /** @var bool */
-    public $fromEnd;
-
     /**
-     * StringFetcher constructor. 
+     * CharFetcher constructor. 
      * 
      * @param string $str
-     * @param int $ptLen Number of characters in the string to be extracted at a time.
-     * @param bool $spacePadding Whether to fill the remaining characters with single-byte spaces.
-     * @param bool $fromEnd Whether to fetch string from the end.
      */
-    public function __construct(string $str, int $ptLen = 1, bool $spacePadding = false, bool $fromEnd = false)
+    public function __construct(string $str)
     {
 
         $this->str = $str;
         $this->len = mb_strlen($str);
         $this->cnt = 0;
 
-        $this->ptLen = $ptLen;
-        $this->spacePadding = 0;
-        $this->fromEnd = $fromEnd;
-
     }
 
     /**
-     * Fetch string.
+     * Fetch char.
      * 
      * @return string|false
      */
@@ -90,31 +74,24 @@ class StringFetcher
         if($this->fetchedAll())
             return false;
 
-        // 今回の取り出し開始場所計算
-        $thisTimeStart = $this->cnt;
-        $thisTimeStart *= $this->fromEnd ? -1 : 1;
+        $char = mb_substr($this->str, $this->cnt, 1);
 
-        // 今回の取り出し文字数計算
-        $thisTimeLen = ($this->len <= $this->cnt + $this->ptLen) ? $this->len - $this->cnt : $this->ptLen;
+        $this->cnt++;
 
-        $result = mb_substr($this->str, $thisTimeStart, $thisTimeLen);
-        $padding = str_repeat(' ', $this->ptLen - $thisTimeLen);
-        $result = $this->fromEnd ? $padding.$result : $result.$padding;
-        
-        $this->cnt += $thisTimeLen;
-
-        return $result;
+        return $char;
 
     }
 
     /**
-     * Check if all character strings have been fetched.
+     * Check if all characters have been fetched.
      * 
      * @return bool
      */
     public function fetchedAll()
     {
+
         return ($this->len <= $this->cnt);
+        
     }
 
 }
