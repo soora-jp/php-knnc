@@ -53,7 +53,7 @@ SooraJP\KNNC::num2kan(123456789, SooraJP\KNNC\ConvertType::COMPLEX);
 
 ```php
 SooraJP\KNNC::num2kan(123456789, SooraJP\KNNC\ConvertType::COMPLEX | SooraJP\KNNC\ConvertType::STRICT);
-"壱億弐千参百四拾五萬六千七百八拾九"
+// "壱億弐千参百四拾五萬六千七百八拾九"
 ```
 
 ## Reference example
