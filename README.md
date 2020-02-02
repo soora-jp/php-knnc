@@ -1,14 +1,12 @@
-# Japanese-Kanji Numerals string and Numeric Converter (KNNC)
+# Japanese-Kanji Numeral string and Numeric Converter (KNNC)
 
 ## Introduction
 
-This is a PHP library to convert Japanese-Kanji Numerals string and numeric (int or float) each other.
+This is a PHP library for converting between Japanese-Kanji numeral string and numeric (int or float).
 
 ## Requirement
 
 PHP 5.4 or later
-
-(Confirmed PHP document, but the operation check has not been done, so the version may be raised.)
 
 ## Installation
 
@@ -20,7 +18,7 @@ composer require soora-jp/knnc
 
 ## Getting started
 
-### To convert Japanese-Kanji numerals string to numeric
+### Convert Japanese-Kanji numeral string to numeric
 
 ```php
 SooraJP\KNNC::kan2num('一万二千三百四十五');
@@ -28,7 +26,7 @@ SooraJP\KNNC::kan2num('一万二千三百四十五');
 
 Result: 12345
 
-### To convert umeric to Japanese-Kanji numerals string
+### Convert umeric to Japanese-Kanji numeral string
 
 **ConvertType** General
 
