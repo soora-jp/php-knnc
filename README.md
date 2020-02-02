@@ -32,32 +32,29 @@ Result: 12345
 
 ```php
 SooraJP\KNNC::num2kan(123456789);
+// "一億二三四五万六七八九"
 ```
-Result: "一億二三四五万六七八九"
 
 **ConvertType** General Strict
 
 ```php
 SooraJP\KNNC::num2kan(123456789, SooraJP\KNNC\ConvertType::STRICT);
+// "一億二千三百四十五万六千七百八十九"
 ```
-
-Result: "一億二千三百四十五万六千七百八十九"
 
 **ConvertType** Complex
 
 ```php
 SooraJP\KNNC::num2kan(123456789, SooraJP\KNNC\ConvertType::COMPLEX);
+// "壱億弐参四五万六七八九"
 ```
-
-Result: "壱億弐参四五万六七八九"
 
 **ConvertType** Complex Strict
 
 ```php
 SooraJP\KNNC::num2kan(123456789, SooraJP\KNNC\ConvertType::COMPLEX | SooraJP\KNNC\ConvertType::STRICT);
+"壱億弐千参百四拾五萬六千七百八拾九"
 ```
-
-Result: "壱億弐千参百四拾五萬六千七百八拾九"
 
 ## Reference example
 
