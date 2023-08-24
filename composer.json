@@ -17,7 +17,7 @@
         "email": "dev@soora.jp"
     },
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=8.0"
     },
     "autoload": {
         "psr-4": {
