@@ -6,7 +6,7 @@ This is a PHP library for converting between Japanese-Kanji numeral string and n
 
 ## Requirement
 
-PHP 5.4 or later
+PHP 8.0 or later
 
 ## Installation
 
