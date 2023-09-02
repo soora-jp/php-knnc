@@ -123,7 +123,7 @@ class Util
      * @param string $str
      * @return bool
      */
-    public static function isRankPart(string $str)
+    public static function isRankPart(string $char)
     {
         return array_key_exists($char, Data::RANK_PART);
     }
