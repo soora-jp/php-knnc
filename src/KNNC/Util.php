@@ -117,7 +117,7 @@ class Util
     }
 
     /**
-     * $str が rank の文字列の一部に該当するかを確認する。
+     * $char が rank の文字列の一部に該当するかを確認する。
      * ※ rank の文字列の一部の一覧は \SooraJP\KNNC\Data.php を参照のこと。
      * 
      * @param string $char
